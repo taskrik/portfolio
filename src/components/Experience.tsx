@@ -59,24 +59,21 @@ function ExperienceCard({
         </div>
 
         {/* Role and company */}
-        <div className="overflow-visible">
-          <span
-            className={`syne-fix font-display font-700 text-xl md:text-2xl ${
-              isBusiness ? "text-text-secondary" : "text-text-primary"
-            }`}
-          >
-            {job.role}
-          </span>
-        </div>
-        <div className="overflow-visible">
-          <span
-            className={`font-body font-500 text-base ${
-              isBusiness ? "text-text-muted" : "text-accent/80"
-            }`}
-          >
-            {job.company}
-          </span>
-        </div>
+        <h3
+          className={`font-display font-700 text-xl md:text-2xl ${
+            isBusiness ? "text-text-secondary" : "text-text-primary"
+          }`}
+          style={{ lineHeight: 2, paddingBottom: "0.25em", overflow: "visible" }}
+        >
+          {job.role}
+        </h3>
+        <p
+          className={`font-body font-500 text-base ${
+            isBusiness ? "text-text-muted" : "text-accent/80"
+          }`}
+        >
+          {job.company}
+        </p>
 
         {/* Bullets */}
         <ul className="mt-5 space-y-3">

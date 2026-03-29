@@ -104,9 +104,9 @@ body::before {
 
 /* Fix Syne font descender clipping at body text sizes */
 .syne-fix {
-  line-height: 1.5 !important;
-  padding-bottom: 4px;
+  line-height: 1.8 !important;
   display: inline-block;
+  overflow: visible;
 }
 
 /* Dot grid pattern */

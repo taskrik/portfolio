@@ -1,23 +1,42 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background grid */}
       <div className="absolute inset-0 dot-grid opacity-30" />
 
-      {/* Gradient orbs */}
       <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px]" />
       <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/3 blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full py-32 md:py-0">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
-          {/* Left content */}
           <div className="flex flex-col gap-5">
-            {/* Overline */}
+            {/* Mobile profile photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="md:hidden flex justify-center"
+            >
+              <div className="relative w-32 h-32">
+                <div className="absolute -inset-1 bg-linear-to-br from-accent/30 via-accent/10 to-transparent rounded-full blur-sm" />
+                <div className="relative w-full h-full overflow-hidden rounded-full border border-border">
+                  <Image
+                    src="/profile.jpeg"
+                    alt="Anastasios Krikonis"
+                    fill
+                    sizes="128px"
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -30,7 +49,6 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Name */}
             <div className="overflow-hidden pb-2">
               <motion.h1
                 initial={{ y: 120 }}
@@ -60,31 +78,19 @@ export default function Hero() {
               </motion.h1>
             </div>
 
-            {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="max-w-xl text-text-muted text-sm md:text-base leading-relaxed mt-2"
+              className="max-w-xl text-text-secondary text-base md:text-lg leading-relaxed mt-2"
             >
               {personalInfo.subtitle}
             </motion.p>
 
-            {/* Summary */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="max-w-lg text-text-secondary text-base md:text-lg leading-relaxed"
-            >
-              {personalInfo.summary}
-            </motion.p>
-
-            {/* CTA buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
               className="flex flex-wrap gap-4 mt-2"
             >
               <a
@@ -114,12 +120,11 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Stats row */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="flex gap-12 mt-8 pt-8 border-t border-border/50"
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 mt-8 pt-8 border-t border-border/50"
             >
               {[
                 { value: "7+", label: "Years Engineering" },
@@ -139,32 +144,31 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right - Profile photo */}
+          {/* Desktop profile photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative hidden md:block"
           >
-            <div className="relative w-[320px] lg:w-[380px]">
-              {/* Accent border glow */}
-              <div className="absolute -inset-1 bg-gradient-to-br from-accent/30 via-accent/10 to-transparent rounded-2xl blur-sm" />
-              <div className="relative overflow-hidden rounded-2xl border border-border">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+            <div className="relative w-[360px] lg:w-[440px] aspect-3/4">
+              <div className="absolute -inset-1 bg-linear-to-br from-accent/30 via-accent/10 to-transparent rounded-2xl blur-sm" />
+              <div className="relative w-full h-full overflow-hidden rounded-2xl border border-border">
+                <Image
                   src="/profile.jpeg"
                   alt="Anastasios Krikonis"
-                  className="object-cover w-full h-auto block"
+                  fill
+                  sizes="(min-width: 1024px) 440px, 360px"
+                  priority
+                  className="object-cover"
                 />
-                {/* Gradient overlay at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-bg via-transparent to-transparent opacity-40" />
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
