@@ -34,7 +34,7 @@ export const personalInfo = {
 
 export const experience = [
   {
-    role: "Lead Mobile Developer",
+    role: "Lead Software Engineer",
     company: "The New Black",
     period: "05/2026 - Present",
     location: "Netherlands",
