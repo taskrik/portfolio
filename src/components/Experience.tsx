@@ -60,14 +60,9 @@ function ExperienceCard({
 
         {/* Role and company */}
         <h3
-          className={`font-display font-700 text-xl md:text-2xl ${
+          className={`font-body font-700 text-xl md:text-2xl ${
             isBusiness ? "text-text-secondary" : "text-text-primary"
           }`}
-          style={{
-            lineHeight: 2,
-            paddingBottom: "0.25em",
-            overflow: "visible",
-          }}
         >
           {job.role}
         </h3>
