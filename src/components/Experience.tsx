@@ -63,7 +63,11 @@ function ExperienceCard({
           className={`font-display font-700 text-xl md:text-2xl ${
             isBusiness ? "text-text-secondary" : "text-text-primary"
           }`}
-          style={{ lineHeight: 2, paddingBottom: "0.25em", overflow: "visible" }}
+          style={{
+            lineHeight: 2,
+            paddingBottom: "0.25em",
+            overflow: "visible",
+          }}
         >
           {job.role}
         </h3>
@@ -93,12 +97,7 @@ function ExperienceCard({
                   isBusiness ? "text-text-muted" : "text-accent"
                 }`}
               >
-                <svg
-                  width="6"
-                  height="6"
-                  viewBox="0 0 6 6"
-                  fill="currentColor"
-                >
+                <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
                   <rect width="6" height="6" rx="1" />
                 </svg>
               </span>

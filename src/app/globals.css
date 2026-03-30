@@ -61,7 +61,9 @@ body::before {
 
 /* Glow effect for accent elements */
 .glow {
-  box-shadow: 0 0 20px var(--color-accent-dim), 0 0 60px var(--color-accent-dim);
+  box-shadow:
+    0 0 20px var(--color-accent-dim),
+    0 0 60px var(--color-accent-dim);
 }
 
 .glow-text {
@@ -111,6 +113,10 @@ body::before {
 
 /* Dot grid pattern */
 .dot-grid {
-  background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    var(--color-border) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
 }

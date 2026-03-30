@@ -10,7 +10,11 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-bg-surface/40" ref={ref}>
+    <section
+      id="projects"
+      className="py-24 md:py-32 bg-bg-surface/40"
+      ref={ref}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeading label="Projects" index="04" inView={inView} />
 

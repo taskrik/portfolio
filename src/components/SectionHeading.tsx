@@ -8,7 +8,11 @@ interface SectionHeadingProps {
   inView: boolean;
 }
 
-export default function SectionHeading({ label, index, inView }: SectionHeadingProps) {
+export default function SectionHeading({
+  label,
+  index,
+  inView,
+}: SectionHeadingProps) {
   return (
     <div className="flex items-center gap-4">
       <motion.span

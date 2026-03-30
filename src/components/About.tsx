@@ -35,7 +35,12 @@ export default function About() {
               {personalInfo.coreImpact.map((item) => (
                 <div key={item.label} className="flex gap-3">
                   <span className="text-accent mt-1 shrink-0">
-                    <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
+                    <svg
+                      width="6"
+                      height="6"
+                      viewBox="0 0 6 6"
+                      fill="currentColor"
+                    >
                       <rect width="6" height="6" rx="1" />
                     </svg>
                   </span>

@@ -72,10 +72,7 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h3 className="font-display font-800 text-4xl md:text-6xl leading-[1.1] tracking-tight">
-                Let&apos;s{" "}
-                <span className="text-accent">
-                  Connect
-                </span>
+                Let&apos;s <span className="text-accent">Connect</span>
                 <span className="text-accent">.</span>
               </h3>
               <p className="text-text-secondary text-lg mt-6 max-w-md leading-relaxed">
