@@ -9,7 +9,7 @@ export const personalInfo = {
   phone: "+31619591073",
   email: "tasos.krikonis@gmail.com",
   github: "https://github.com/taskrik",
-  linkedin: "https://www.linkedin.com/in/tasoskrikonis/",
+  linkedin: "https://www.linkedin.com/in/tasos-krikonis/",
   medium: "https://medium.com/@tasos.krikonis",
   summary:
     "Senior Software Engineer with 7+ years of engineering experience and 13+ years in professional roles spanning tech and business operations. I build production-grade web and mobile applications that drive measurable business growth, specializing in the JavaScript and TypeScript ecosystems where reliability and scalability are non-negotiable.",
