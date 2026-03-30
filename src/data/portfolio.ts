@@ -95,30 +95,6 @@ export const experience = [
   },
 ];
 
-const _education = [
-  {
-    title: "Linux Academy",
-    institution: "Linux Academy",
-    period: "01/2020",
-    location: "Online",
-    details: ["AWS Concepts (Jan 2020)", "Vagrant and VMs (Sep 2020)"],
-  },
-  {
-    title: "Certificate for Full Stack Development",
-    institution: "Cadaisseur Academy",
-    period: "05/2018 - 08/2018",
-    location: "Amsterdam",
-    details: ["React, React Native, NodeJS, Redux"],
-  },
-  {
-    title: "Civil Engineering",
-    institution: "University of Patras",
-    period: "10/2008 - 07/2012",
-    location: "Greece",
-    details: [],
-  },
-];
-
 export const skills = {
   "Front-End": [
     "React",
