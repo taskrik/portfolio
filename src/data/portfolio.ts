@@ -95,7 +95,7 @@ export const experience = [
   },
 ];
 
-export const education = [
+const _education = [
   {
     title: "Linux Academy",
     institution: "Linux Academy",

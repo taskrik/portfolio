@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
-import { personalInfo } from "@/data/portfolio";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -76,7 +75,9 @@ export default function Navigation() {
               className="block w-6 h-0.5 bg-text-primary"
             />
             <motion.span
-              animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              animate={
+                mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+              }
               className="block w-6 h-0.5 bg-text-primary"
             />
           </button>
@@ -107,11 +108,7 @@ export default function Navigation() {
           href="/Anastasios_Krikonis_CV.pdf"
           download
           initial={{ opacity: 0, y: 20 }}
-          animate={
-            mobileOpen
-              ? { opacity: 1, y: 0 }
-              : { opacity: 0, y: 20 }
-          }
+          animate={mobileOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: mobileOpen ? navLinks.length * 0.1 : 0 }}
           className="text-lg font-600 px-8 py-3 border border-accent text-accent rounded hover:bg-accent hover:text-bg transition-all duration-300"
         >
