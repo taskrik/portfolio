@@ -104,13 +104,6 @@ body::before {
   animation: shimmer 1.5s ease-in-out;
 }
 
-/* Fix Syne font descender clipping at body text sizes */
-.syne-fix {
-  line-height: 1.8 !important;
-  display: inline-block;
-  overflow: visible;
-}
-
 /* Dot grid pattern */
 .dot-grid {
   background-image: radial-gradient(
