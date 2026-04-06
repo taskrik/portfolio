@@ -3,6 +3,7 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { personalInfo } from "@/data/portfolio";
+import { trackEvent } from "@/lib/analytics";
 import SectionHeading from "./SectionHeading";
 
 const socialLinks = [
@@ -91,6 +92,9 @@ export default function Contact() {
               <a
                 href="/Anastasios_Krikonis_CV.pdf"
                 download
+                onClick={() =>
+                  trackEvent("download_cv", { location: "contact" })
+                }
                 className="group inline-flex items-center gap-3 px-7 py-4 bg-accent text-bg font-body font-600 text-sm rounded hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
               >
                 <svg
@@ -137,6 +141,12 @@ export default function Contact() {
                 href={link.href}
                 target={link.label !== "Email" ? "_blank" : undefined}
                 rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
+                onClick={() =>
+                  trackEvent("social_click", {
+                    label: link.label,
+                    location: "contact",
+                  })
+                }
                 initial={{ opacity: 0, x: 20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}

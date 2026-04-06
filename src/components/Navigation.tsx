@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -46,6 +47,12 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={() =>
+                  trackEvent("nav_click", {
+                    label: link.label,
+                    location: "desktop",
+                  })
+                }
                 className="text-sm font-body text-text-secondary hover:text-accent transition-colors duration-300"
               >
                 {link.label}
@@ -54,6 +61,9 @@ export default function Navigation() {
             <a
               href="/Anastasios_Krikonis_CV.pdf"
               download
+              onClick={() =>
+                trackEvent("download_cv", { location: "nav_desktop" })
+              }
               className="text-sm font-600 px-5 py-2 border border-accent text-accent rounded hover:bg-accent hover:text-bg transition-all duration-300"
             >
               Download CV
@@ -95,7 +105,13 @@ export default function Navigation() {
           <motion.a
             key={link.href}
             href={link.href}
-            onClick={() => setMobileOpen(false)}
+            onClick={() => {
+              trackEvent("nav_click", {
+                label: link.label,
+                location: "mobile",
+              });
+              setMobileOpen(false);
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={mobileOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: mobileOpen ? i * 0.1 : 0 }}
@@ -107,6 +123,7 @@ export default function Navigation() {
         <motion.a
           href="/Anastasios_Krikonis_CV.pdf"
           download
+          onClick={() => trackEvent("download_cv", { location: "nav_mobile" })}
           initial={{ opacity: 0, y: 20 }}
           animate={mobileOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: mobileOpen ? navLinks.length * 0.1 : 0 }}

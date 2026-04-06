@@ -3,6 +3,7 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { projects } from "@/data/portfolio";
+import { trackEvent } from "@/lib/analytics";
 import SectionHeading from "./SectionHeading";
 
 export default function Projects() {
@@ -25,6 +26,12 @@ export default function Projects() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackEvent("project_click", {
+                  name: project.name,
+                  url: project.url,
+                })
+              }
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}

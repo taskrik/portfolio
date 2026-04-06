@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 
 const syne = Syne({
@@ -57,7 +58,9 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${dmSans.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        <PostHogProvider>{children}</PostHogProvider>
+      </body>
     </html>
   );
 }

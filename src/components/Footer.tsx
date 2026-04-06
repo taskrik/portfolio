@@ -1,6 +1,7 @@
 "use client";
 
 import { personalInfo } from "@/data/portfolio";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -17,6 +18,12 @@ export default function Footer() {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackEvent("social_click", {
+                label: "GitHub",
+                location: "footer",
+              })
+            }
             className="text-text-muted hover:text-accent transition-colors text-sm"
           >
             GitHub
@@ -25,6 +32,12 @@ export default function Footer() {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackEvent("social_click", {
+                label: "LinkedIn",
+                location: "footer",
+              })
+            }
             className="text-text-muted hover:text-accent transition-colors text-sm"
           >
             LinkedIn
@@ -33,6 +46,12 @@ export default function Footer() {
             href={personalInfo.medium}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackEvent("social_click", {
+                label: "Medium",
+                location: "footer",
+              })
+            }
             className="text-text-muted hover:text-accent transition-colors text-sm"
           >
             Medium

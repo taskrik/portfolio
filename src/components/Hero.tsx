@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/portfolio";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Hero() {
   return (
@@ -99,6 +100,9 @@ export default function Hero() {
             >
               <a
                 href="#experience"
+                onClick={() =>
+                  trackEvent("cta_click", { label: "view_experience" })
+                }
                 className="group inline-flex items-center gap-2 px-7 py-3.5 bg-accent text-bg font-body font-600 text-sm rounded hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
               >
                 View Experience
@@ -118,6 +122,9 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
+                onClick={() =>
+                  trackEvent("cta_click", { label: "get_in_touch" })
+                }
                 className="inline-flex items-center gap-2 px-7 py-3.5 border border-border text-text-primary font-body font-500 text-sm rounded hover:border-accent/50 hover:text-accent transition-all duration-300"
               >
                 Get in Touch
