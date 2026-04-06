@@ -12,7 +12,8 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     if (!key || !host) return;
 
     posthog.init(key, {
-      api_host: host,
+      api_host: "/ingest",
+      ui_host: host,
       capture_pageview: true,
       capture_pageleave: true,
       autocapture: false,
