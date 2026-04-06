@@ -12,7 +12,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     if (!key || !host) return;
 
     posthog.init(key, {
-      api_host: "/ingest",
+      api_host: "/d",
       ui_host: host,
       capture_pageview: true,
       capture_pageleave: true,
