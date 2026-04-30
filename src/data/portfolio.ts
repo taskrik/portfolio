@@ -34,17 +34,17 @@ export const personalInfo = {
 
 export const experience = [
   {
-    role: "Lead Software Engineer",
+    role: "Senior React Native Engineer",
     company: "The New Black",
     period: "05/2026 - Present",
     location: "Netherlands",
     type: "engineering" as const,
     bullets: [
-      "Leading mobile development efforts, driving architecture decisions and team collaboration for a new product.",
+      "Driving architecture decisions and team collaboration for a new mobile product.",
     ],
   },
   {
-    role: "Senior Software Engineer",
+    role: "Senior React & React Native Engineer",
     company: "Bitvavo BV",
     period: "12/2024 - 05/2026",
     location: "Amsterdam, Netherlands",
