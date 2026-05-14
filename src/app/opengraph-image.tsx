@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { yearsEngineering, yearsProfessional } from "@/data/portfolio";
 
 export const alt = "Anastasios Krikonis - Senior Software Engineer";
 export const size = { width: 1200, height: 630 };
@@ -111,8 +112,7 @@ export default async function Image() {
             lineHeight: 1.5,
           }}
         >
-          7+ years building production-grade web & mobile apps in Fintech & IoT.
-          React, React Native, Node.js, TypeScript.
+          {`${yearsEngineering}+ years building production-grade web & mobile apps in Fintech & IoT. React, React Native, Node.js, TypeScript.`}
         </div>
 
         {/* Stats row */}
@@ -126,8 +126,8 @@ export default async function Image() {
           }}
         >
           {[
-            { value: "7+", label: "Years Engineering" },
-            { value: "13+", label: "Years Professional" },
+            { value: `${yearsEngineering}+`, label: "Years Engineering" },
+            { value: `${yearsProfessional}+`, label: "Years Professional" },
             { value: "5", label: "Companies" },
           ].map((stat) => (
             <div

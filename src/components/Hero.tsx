@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { personalInfo } from "@/data/portfolio";
+import {
+  personalInfo,
+  yearsEngineering,
+  yearsProfessional,
+} from "@/data/portfolio";
 import { trackEvent } from "@/lib/analytics";
 
 export default function Hero() {
@@ -138,8 +142,8 @@ export default function Hero() {
               className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 mt-8 pt-8 border-t border-border/50"
             >
               {[
-                { value: "7+", label: "Years Engineering" },
-                { value: "13+", label: "Years Professional" },
+                { value: `${yearsEngineering}+`, label: "Years Engineering" },
+                { value: `${yearsProfessional}+`, label: "Years Professional" },
                 { value: "5", label: "Companies" },
                 { value: "5", label: "Side Projects" },
               ].map((stat) => (

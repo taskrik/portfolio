@@ -1,3 +1,11 @@
+const ENGINEERING_START_YEAR = 2018;
+const PROFESSIONAL_START_YEAR = 2013;
+
+export const yearsEngineering =
+  new Date().getFullYear() - ENGINEERING_START_YEAR;
+export const yearsProfessional =
+  new Date().getFullYear() - PROFESSIONAL_START_YEAR;
+
 export const personalInfo = {
   name: "Anastasios Krikonis",
   firstName: "Anastasios",
@@ -11,8 +19,7 @@ export const personalInfo = {
   github: "https://github.com/taskrik",
   linkedin: "https://www.linkedin.com/in/tasos-krikonis/",
   medium: "https://medium.com/@tasos.krikonis",
-  summary:
-    "Senior Software Engineer with 7+ years of engineering experience and 13+ years in professional roles spanning tech and business operations. I build production-grade web and mobile applications that drive measurable business growth, specializing in the JavaScript and TypeScript ecosystems where reliability and scalability are non-negotiable.",
+  summary: `Senior Software Engineer with ${yearsEngineering}+ years of engineering experience and ${yearsProfessional}+ years in professional roles spanning tech and business operations. I build production-grade web and mobile applications that drive measurable business growth, specializing in the JavaScript and TypeScript ecosystems where reliability and scalability are non-negotiable.`,
   extendedSummary:
     "What sets me apart is a rare combination: I've managed P&Ls, led teams, and optimized operations across multiple countries before writing my first line of production code. That business DNA means I don't just ship features — I understand unit economics, conversion funnels, and what makes a product succeed. I take full ownership from architecture to production, with automated CI/CD and end-to-end observability.",
   tagline: "Engineer with a business mind. Builder by nature.",
@@ -34,13 +41,14 @@ export const personalInfo = {
 
 export const experience = [
   {
-    role: "Senior React Native Engineer",
-    company: "The New Black",
+    role: "Lead React Native Developer",
+    company: "New Black",
     period: "05/2026 - Present",
     location: "Netherlands",
     type: "engineering" as const,
     bullets: [
-      "Driving architecture decisions and team collaboration for a new mobile product.",
+      "Embedded with client engineering teams as a technical lead, bridging business requirements and development execution across React Native mobile products.",
+      "Driving codebase improvements, performance optimizations, and tooling enhancements to elevate app quality and developer productivity.",
     ],
   },
   {

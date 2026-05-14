@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import { PostHogProvider } from "./providers";
+import { yearsEngineering, yearsProfessional } from "@/data/portfolio";
 import "./globals.css";
 
 const syne = Syne({
@@ -17,8 +18,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Anastasios Krikonis | Senior Software Engineer",
-  description:
-    "Senior Software Engineer with 7+ years building production-grade web & mobile apps in Fintech & IoT. React, React Native, Node.js, TypeScript. 13+ years of professional experience.",
+  description: `Senior Software Engineer with ${yearsEngineering}+ years building production-grade web & mobile apps in Fintech & IoT. React, React Native, Node.js, TypeScript. ${yearsProfessional}+ years of professional experience.`,
   keywords: [
     "Senior Software Engineer",
     "React",
@@ -35,16 +35,14 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Anastasios Krikonis | Senior Software Engineer",
-    description:
-      "Senior Software Engineer with 7+ years building production-grade web & mobile apps. Driving revenue growth through technical excellence in Fintech & IoT.",
+    description: `Senior Software Engineer with ${yearsEngineering}+ years building production-grade web & mobile apps. Driving revenue growth through technical excellence in Fintech & IoT.`,
     type: "website",
     siteName: "Anastasios Krikonis Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Anastasios Krikonis | Senior Software Engineer",
-    description:
-      "7+ years building production-grade web & mobile apps. React, React Native, Node.js, TypeScript.",
+    description: `${yearsEngineering}+ years building production-grade web & mobile apps. React, React Native, Node.js, TypeScript.`,
   },
 };
 
