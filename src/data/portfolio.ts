@@ -47,8 +47,9 @@ export const experience = [
     location: "Netherlands",
     type: "engineering" as const,
     bullets: [
-      "Embedded with client engineering teams as a technical lead, bridging business requirements and development execution across React Native mobile products.",
-      "Driving codebase improvements, performance optimizations, and tooling enhancements to elevate app quality and developer productivity.",
+      "Leading React Native integrations of New Black's EVA unified commerce platform and backend SDKs into the mobile apps of major retail brands, including Rituals and Hunkemöller.",
+      "Embedded with client engineering teams as technical lead, translating business requirements into architecture and guiding delivery from SDK integration to production release.",
+      "Driving codebase improvements, performance optimizations, and tooling enhancements that raise app quality and developer productivity across client projects.",
     ],
   },
   {
@@ -141,7 +142,7 @@ export const projects = [
     name: "CountryQuest",
     url: "https://www.countryquest.app/",
     description:
-      "An interactive geography quiz app that challenges users to explore and learn about countries around the world.",
+      "A gamified travel app that turns real-world trips into a quest: check in at 25,000+ landmarks across 218 countries to capture places, conquer countries, and climb global leaderboards.",
   },
   {
     name: "Voltchek",
